@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <!-- السماح بـ cleartext فقط للـ localhost (للتطوير) -->
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="true">127.0.0.1</domain>
+        <domain includeSubdomains="true">localhost</domain>
+    </domain-config>
+
+    <!-- باقي الاتصالات يجب أن تكون HTTPS -->
+    <domain-config>
+        <domain includeSubdomains="true">YOUR_DOMAIN.com</domain>
+    </domain-config>
+</network-security-config>
